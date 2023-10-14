@@ -18,7 +18,14 @@ async function refreshDashboard(browser) {
     while (true) {
         console.log(`Times refreshing the dashboard: ${++i}`);
         await browser.refresh();
-        await waitUntilDashboardLoaded(browser);
+        try {
+            await waitUntilDashboardLoaded(browser, 20000);
+        } catch(e) {
+            // If the dashboard is not loaded in 20 seconds, catch error and refresh again.
+            // This can happen due to 5xx errors.
+            console.log(e)
+        }
+
     }
 }
 
