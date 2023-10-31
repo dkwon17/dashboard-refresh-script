@@ -25,7 +25,6 @@ async function refreshDashboard(browser) {
             // This can happen due to 5xx errors.
             console.log(e)
         }
-
     }
 }
 
