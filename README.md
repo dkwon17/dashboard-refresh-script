@@ -3,7 +3,7 @@
 Simple script to refresh the Che/DS dashboard until 401/403 errors occur.
 
 ### How to run
-1. Set the CHE_URL environment variable to the Che/DS instance url in the `che.env`` file located in this repository.
+1. Set the `CHE_URL` environment variable to the Che/DS instance url in the `che.env` file located in this repository.
 
 2. Download dependencies:
 ```
